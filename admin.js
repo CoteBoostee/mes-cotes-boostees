@@ -58,7 +58,7 @@ try {
 
 await fetch(
 
-"https://script.google.com/macros/s/AKfycbxX_lb9HLu1_1ZQOzFz0GVxpIuNqo_xKuJyclCWGv-QzdKojQ4sm1OiUfK3SWaf7rUOjQ/exec",
+"https://script.google.com/macros/s/AKfycbxJRxBw-wkDqXYnEoXmHgLYA1il4TVW6HwEMnqhq52Gkx5WO-Jcf1EeXgRK6hEhxBgJOA/exec",
 
 {
 method:"POST",
