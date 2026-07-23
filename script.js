@@ -973,7 +973,7 @@ document
 
 
 <p>
-${bet.sport}
+${sportName(bet.sport)}
 -
 ${bet.bookmaker}
 </p>
