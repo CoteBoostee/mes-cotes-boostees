@@ -6,7 +6,7 @@
 
 let bets = [];
 let filteredBets = [];
-
+let profitChart = null;
 
 
 /* =====================================
