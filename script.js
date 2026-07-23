@@ -751,7 +751,76 @@ roi.toFixed(1)
 
 }
 
+/* =====================================
+   STATISTIQUES DU MOIS
+===================================== */
 
+
+function updateMonthStats(){
+
+
+let mois =
+document
+.getElementById("monthFilter")
+.value;
+
+
+
+let zone =
+document
+.getElementById("monthStats");
+
+
+
+if(!mois){
+
+zone.innerHTML = "";
+
+return;
+
+}
+
+
+
+let monthBets =
+bets.filter(bet =>
+getMonth(bet.date) === mois
+);
+
+
+
+let profit = 0;
+
+
+monthBets.forEach(bet=>{
+
+profit += bet.benefice;
+
+});
+
+
+
+zone.innerHTML = `
+
+<h3>
+📅 ${mois}
+</h3>
+
+<p>
+🎯 Paris : ${monthBets.length}
+</p>
+
+<p>
+💰 Bénéfice : 
+${profit >= 0 ? "+" : ""}
+${profit.toFixed(2)} €
+</p>
+
+`;
+
+
+
+}
 
 
 
@@ -954,7 +1023,7 @@ displayBets();
 
 updateStats();
 
-
+updateMonthStats();
 
 }
 
