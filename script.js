@@ -1200,9 +1200,11 @@ function drawChart(){
 
                 borderWidth:3,
 
-                pointRadius:4,
+                pointRadius:0,
 
-                pointHoverRadius:7
+                pointHoverRadius:6,
+
+                pointHitRadius:12
 
             }]
 
