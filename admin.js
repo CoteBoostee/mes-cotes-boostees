@@ -1,10 +1,78 @@
-function addBet(){
+async function addBet(){
+
+
+let data = new FormData();
+
+
+data.append(
+"sport",
+document.getElementById("sport").value
+);
+
+
+data.append(
+"date",
+document.getElementById("date").value
+);
+
+
+data.append(
+"bookmaker",
+document.getElementById("bookmaker").value
+);
+
+
+data.append(
+"motif",
+document.getElementById("motif").value
+);
+
+
+data.append(
+"cote",
+document.getElementById("cote").value
+);
+
+
+data.append(
+"mise",
+document.getElementById("mise").value
+);
+
+
+data.append(
+"benefice",
+0
+);
+
+
+data.append(
+"resultat",
+document.getElementById("resultat").value
+);
+
+
+
+await fetch(
+
+"https://script.google.com/macros/s/AKfycby_EojmIDdnA7dMkUhZPH78xQ0lbnJukuV_xz5rlQnUEHlgZrXwXNBo5LzZDy1-UAdl0w/exec",
+
+{
+
+method:"POST",
+
+body:data
+
+}
+
+);
+
 
 
 document
 .getElementById("message")
 .textContent =
-"Test administration OK";
+"✅ Pari ajouté";
 
 
 }
