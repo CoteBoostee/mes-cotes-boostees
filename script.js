@@ -868,9 +868,38 @@ bets.map(
 b=>getMonth(b.date)
 )
 )
-]
+].map(mois=>{
+
+
+let profit =
+bets
+.filter(
+bet=>getMonth(bet.date)===mois
+)
+.reduce(
+(total,bet)=>
+total + Number(bet.benefice || 0),
+0
 );
 
+
+return {
+value: mois,
+text:
+mois
++
+" ("
++
+(profit >= 0 ? "+" : "")
++
+profit.toFixed(2)
++
+" €)"
+};
+
+
+})
+);
 
 }
 
@@ -882,11 +911,12 @@ document.getElementById(id);
 
 
 
-select.innerHTML = select.options[0].outerHTML;
+select.innerHTML =
+select.options[0].outerHTML;
 
 
 
-values.forEach(value=>{
+values.forEach(item=>{
 
 
 let option =
@@ -894,13 +924,30 @@ document.createElement("option");
 
 
 
-option.value =
-value;
+if(typeof item === "object"){
 
+
+option.value =
+item.value;
 
 
 option.textContent =
-value;
+item.text;
+
+
+}
+else{
+
+
+option.value =
+item;
+
+
+option.textContent =
+item;
+
+
+}
 
 
 
@@ -912,7 +959,6 @@ select.appendChild(option);
 
 
 }
-
 
 
 
