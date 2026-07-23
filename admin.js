@@ -83,15 +83,12 @@ document
 
 catch(error){
 
-
 document
 .getElementById("message")
 .textContent =
-"❌ Erreur envoi";
-
+"❌ " + error.message;
 
 console.error(error);
-
 
 }
 
