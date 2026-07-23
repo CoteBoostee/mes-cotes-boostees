@@ -747,45 +747,45 @@ function createFilters(){
 
 
 fillSelect(
-"sportFilter",
-[
-...new Set(
-bets.map(
-b=>b.sport
-)
-)
-]
+    "sportFilter",
+    [
+        ...new Set(
+            bets.map(
+                b => b.sport
+            )
+        )
+    ]
 );
 
 
 
 fillSelect(
-"bookmakerFilter",
-[
-...new Set(
-bets.map(
-b=>b.bookmaker
-)
-)
-]
+    "bookmakerFilter",
+    [
+        ...new Set(
+            bets.map(
+                b => b.bookmaker
+            )
+        )
+    ]
 );
 
 
 
 fillSelect(
-"monthFilter",
-[
-...new Set(
-bets.map(
-b=>getMonth(b.date)
-)
-.filter(
-m=>m
-)
-   )
-]
+    "monthFilter",
+    [
+        ...new Set(
+            bets
+            .map(
+                b => getMonth(b.date)
+            )
+            .filter(
+                m => m
+            )
+        )
+    ]
 );
-
 
 
 }
