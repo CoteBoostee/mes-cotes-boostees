@@ -53,6 +53,9 @@ document.getElementById("resultat").value
 
 
 
+try {
+
+
 await fetch(
 
 "https://script.google.com/macros/s/AKfycby_EojmIDdnA7dMkUhZPH78xQ0lbnJukuV_xz5rlQnUEHlgZrXwXNBo5LzZDy1-UAdl0w/exec",
@@ -72,7 +75,25 @@ body:data
 document
 .getElementById("message")
 .textContent =
-"✅ Pari ajouté";
+"✅ Pari ajouté dans Google Sheets";
+
+
+
+}
+
+catch(error){
+
+
+document
+.getElementById("message")
+.textContent =
+"❌ Erreur envoi";
+
+
+console.error(error);
+
+
+}
 
 
 }
