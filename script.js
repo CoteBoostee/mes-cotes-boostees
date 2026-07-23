@@ -871,7 +871,7 @@ b=>getMonth(b.date)
 ]
 );
 
-
+}
 
 
 
