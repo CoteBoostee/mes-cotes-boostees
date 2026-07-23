@@ -874,7 +874,44 @@ b=>getMonth(b.date)
 
 }
 
+function fillSelect(id,values){
 
+
+let select =
+document.getElementById(id);
+
+
+
+select.innerHTML = select.options[0].outerHTML;
+
+
+
+values.forEach(value=>{
+
+
+let option =
+document.createElement("option");
+
+
+
+option.value =
+value;
+
+
+
+option.textContent =
+value;
+
+
+
+select.appendChild(option);
+
+
+
+});
+
+
+}
 
 
 
