@@ -1043,7 +1043,30 @@ document
 applyFilters
 );
 
+function sportName(symbol){
 
+    const sports = {
+
+        "⚽": "Football",
+        "🏀": "Basket",
+        "🎾": "Tennis",
+        "🥊": "Combat",
+        "🏒": "Hockey",
+        "⚾": "Baseball",
+        "🏎️": "Formule 1",
+        "🏉": "Rugby",
+        "🏌️": "Golf",
+        "🏓": "Tennis de table",
+        "🏐": "Volley"
+
+    };
+
+
+    return sports[symbol]
+    ? symbol + " " + sports[symbol]
+    : symbol;
+
+}
 
 
 
