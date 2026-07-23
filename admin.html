@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Administration - Mes Côtes Boostées</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<img src="favicon.png" class="logo">
+
+<h1>
+Administration
+</h1>
+
+<p>
+Ajout d'une nouvelle côte boostée
+</p>
+
+</header>
+
+
+
+<section class="admin-box">
+
+
+<h2>
+➕ Nouveau pari
+</h2>
+
+
+
+<input id="sport" placeholder="Sport">
+
+
+<input id="date" placeholder="Date JJ/MM/AAAA">
+
+
+<input id="bookmaker" placeholder="Bookmaker">
+
+
+<input id="motif" placeholder="Motif">
+
+
+<input id="cote" placeholder="Cote">
+
+
+<input id="mise" placeholder="Mise">
+
+
+<select id="resultat">
+
+<option value="En attente">
+En attente
+</option>
+
+<option value="Gagné">
+Gagné
+</option>
+
+<option value="Perdu">
+Perdu
+</option>
+
+<option value="Remboursé">
+Remboursé
+</option>
+
+</select>
+
+
+
+<button onclick="addBet()">
+Ajouter le pari
+</button>
+
+
+<p id="message"></p>
+
+
+</section>
+
+
+
+<script src="config.js"></script>
+
+<script src="admin.js"></script>
+
+
+</body>
+
+</html>
