@@ -1196,7 +1196,7 @@ function drawChart(){
 
                 fill:true,
 
-                tension:0.35,
+                tension:0.45,
 
                 borderWidth:3,
 
