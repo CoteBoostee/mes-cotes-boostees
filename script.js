@@ -519,7 +519,7 @@ card.innerHTML = `
 
 <div class="sport">
 
-${bet.sport}
+${sportName(bet.sport)}
 
 </div>
 
