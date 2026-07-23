@@ -861,22 +861,41 @@ fillSelect(
 
 
 fillSelect(
-    "monthFilter",
-    [
-        ...new Set(
-            bets
-            .map(
-                b => getMonth(b.date)
-            )
-            .filter(
-                m => m
-            )
-        )
-    ]
+"monthFilter",
+[
+...new Set(
+bets.map(
+b=>getMonth(b.date)
+)
+)
+].map(mois=>{
+
+
+let profit = bets
+.filter(
+bet=>getMonth(bet.date)===mois
+)
+.reduce(
+(total,bet)=>
+total + Number(bet.benefice || 0),
+0
 );
 
 
-}
+
+return mois
++
+" ("
++
+(profit>=0 ? "+" : "")
++
+profit.toFixed(2)
++
+" €)";
+
+
+})
+);
 
 
 
