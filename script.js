@@ -989,6 +989,18 @@ ${bet.motif}
 </h3>
 
 
+<p class="status ${getStatus(bet.resultat)}">
+
+${bet.resultat}
+
+</p>
+
+
+<p>
+💰 Bénéfice : ${bet.benefice || 0} €
+</p>
+
+
 </div>
 
 
