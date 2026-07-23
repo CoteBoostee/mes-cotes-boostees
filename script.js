@@ -31,9 +31,6 @@ console.log("Réponse Google :", response);
 const data =
 await response.json();
 
-alert("Données reçues : " + data.length + " lignes");
-
-
 
 console.log(
 "Données reçues :",
@@ -1054,8 +1051,5 @@ applyFilters
 /* =====================================
    LANCEMENT
 ===================================== */
-
-
-alert("Le script fonctionne");
 
 loadBets();
