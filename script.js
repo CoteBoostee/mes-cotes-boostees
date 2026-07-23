@@ -842,7 +842,14 @@ fillSelect(
                 b => b.sport
             )
         )
-    ]
+    ].map(sport => {
+
+        return {
+            value: sport,
+            text: sportName(sport)
+        };
+
+    })
 );
 
 
