@@ -1103,7 +1103,7 @@ document
 
 
 <h2>
-🔥 Dernière cote boostée
+🔥 Dernière côte boostée
 </h2>
 
 
