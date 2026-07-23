@@ -162,8 +162,6 @@ bets
 filteredBets =
 [...bets];
 
-
-
 createFilters();
 
 displayBets();
@@ -172,12 +170,10 @@ updateStats();
 
 displayLastBet();
 
-
+drawChart();
 
 }
-
 catch(error){
-
 
 console.error(
 "Erreur API :",
@@ -1146,7 +1142,130 @@ ${bet.resultat}
 }
 
 
+/* =====================================
+   GRAPHIQUE
+===================================== */
 
+function drawChart(){
+
+    const canvas = document.getElementById("profitChart");
+
+    if(!canvas) return;
+
+    let cumul = 0;
+
+    let labels = [];
+
+    let data = [];
+
+    [...filteredBets].forEach((bet,index)=>{
+
+        cumul += bet.benefice;
+
+        labels.push(index+1);
+
+        data.push(cumul);
+
+    });
+
+    if(profitChart){
+
+        profitChart.destroy();
+
+    }
+
+    profitChart = new Chart(canvas,{
+
+        type:"line",
+
+        data:{
+
+            labels:labels,
+
+            datasets:[{
+
+                label:"Bénéfice cumulé",
+
+                data:data,
+
+                borderColor:"#FFD700",
+
+                backgroundColor:"rgba(255,215,0,0.15)",
+
+                fill:true,
+
+                tension:0.35,
+
+                borderWidth:3,
+
+                pointRadius:4,
+
+                pointHoverRadius:7
+
+            }]
+
+        },
+
+        options:{
+
+            responsive:true,
+
+            maintainAspectRatio:false,
+
+            plugins:{
+
+                legend:{
+
+                    labels:{
+
+                        color:"#ffffff"
+
+                    }
+
+                }
+
+            },
+
+            scales:{
+
+                x:{
+
+                    ticks:{
+                        color:"#ffffff"
+                    },
+
+                    grid:{
+                        color:"#333"
+                    }
+
+                },
+
+                y:{
+
+                    ticks:{
+                        color:"#ffffff",
+
+                        callback:function(value){
+
+                            return value+" €";
+
+                        }
+
+                    },
+
+                    grid:{
+                        color:"#333"
+                    }
+
+                }
+
+            }
+
+        }
+
+    });
+
+}
 
 
 
