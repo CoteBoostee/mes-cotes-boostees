@@ -389,7 +389,29 @@ date.split("/");
 if(p.length === 3){
 
 
-return p[1]+"/"+p[2];
+let mois = [
+
+"Janvier",
+"Février",
+"Mars",
+"Avril",
+"Mai",
+"Juin",
+"Juillet",
+"Août",
+"Septembre",
+"Octobre",
+"Novembre",
+"Décembre"
+
+];
+
+
+return mois[parseInt(p[1])-1]
++
+" "
++
+p[2];
 
 
 }
