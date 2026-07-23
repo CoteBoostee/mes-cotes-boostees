@@ -875,43 +875,49 @@ b=>getMonth(b.date)
 
 
 
-function fillSelect(id,values){
+fillSelect(
+"monthFilter",
+[
+...new Set(
+bets.map(
+b=>getMonth(b.date)
+)
+)
+].map(mois=>{
 
 
-let select =
-document.getElementById(id);
-
-
-
-values.forEach(value=>{
-
-
-let option =
-document.createElement(
-"option"
+let profit =
+bets
+.filter(
+bet=>getMonth(bet.date)===mois
+)
+.reduce(
+(total,bet)=>
+total + Number(bet.benefice || 0),
+0
 );
 
 
+return {
 
-option.value =
-value;
+value: mois,
+
+text:
+mois
++
+" ("
++
+(profit>=0 ? "+" : "")
++
+profit.toFixed(2)
++
+" €)"
+
+};
 
 
-
-option.textContent =
-value;
-
-
-
-select.appendChild(option);
-
-
-
-});
-
-
-}
-
+})
+);
 
 
 
