@@ -1,0 +1,582 @@
+/* =====================================
+   MES CÔTES BOOSTÉES
+   DESIGN PREMIUM V1
+===================================== */
+
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0b0b0b,
+        #171717
+    );
+
+    color: white;
+
+    min-height: 100vh;
+
+    padding: 20px;
+
+}
+
+
+
+/* ==========================
+   HEADER
+========================== */
+
+
+header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+header h1 {
+
+    font-size: 38px;
+
+    color:
+    #d4af37;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+}
+
+
+header p {
+
+    color: #bbb;
+
+    margin-top: 10px;
+
+    font-size: 16px;
+
+}
+
+
+
+/* ==========================
+   DASHBOARD
+========================== */
+
+
+.dashboard {
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(
+        4,
+        1fr
+    );
+
+    gap: 15px;
+
+    max-width: 1200px;
+
+    margin:
+    0 auto 30px;
+
+}
+
+
+
+.stat {
+
+
+    background:
+    rgba(
+        255,
+        255,
+        255,
+        0.05
+    );
+
+
+    border:
+
+    1px solid
+    rgba(
+        212,
+        175,
+        55,
+        0.3
+    );
+
+
+    border-radius: 15px;
+
+
+    padding: 20px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+    0 10px 25px
+    rgba(
+        0,
+        0,
+        0,
+        .3
+    );
+
+
+}
+
+
+
+.stat span {
+
+    display:block;
+
+    color:#bbb;
+
+    margin-bottom:10px;
+
+}
+
+
+.stat strong {
+
+    font-size:28px;
+
+    color:#d4af37;
+
+}
+
+
+
+
+/* ==========================
+   FILTRES
+========================== */
+
+
+.filters {
+
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+
+    max-width:1200px;
+
+    margin:
+    0 auto 30px;
+
+
+}
+
+
+
+.filters input,
+.filters select {
+
+
+    flex:1;
+
+
+    min-width:200px;
+
+
+    padding:14px;
+
+
+    border-radius:10px;
+
+
+    border:1px solid #333;
+
+
+    background:#111;
+
+
+    color:white;
+
+
+    font-size:15px;
+
+
+}
+
+
+
+.filters select option {
+
+    background:#111;
+
+}
+
+
+
+
+/* ==========================
+   DERNIER PARI
+========================== */
+
+
+#lastBet {
+
+
+    max-width:1200px;
+
+
+    margin:
+    auto auto 25px;
+
+
+}
+
+
+
+
+/* ==========================
+   CARTES PARIS
+========================== */
+
+
+#bets-container {
+
+
+    max-width:1200px;
+
+
+    margin:auto;
+
+
+    display:grid;
+
+
+    grid-template-columns:
+
+    repeat(
+        3,
+        1fr
+    );
+
+
+    gap:20px;
+
+
+}
+
+
+
+
+.bet-card {
+
+
+    background:
+
+    rgba(
+        255,
+        255,
+        255,
+        .05
+    );
+
+
+    border-radius:18px;
+
+
+    padding:20px;
+
+
+    border:
+
+    1px solid
+
+    rgba(
+        255,
+        255,
+        255,
+        .1
+    );
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.bet-card:hover {
+
+
+    transform:
+    translateY(-5px);
+
+
+    border-color:
+
+    #d4af37;
+
+
+}
+
+
+
+
+.bet-header {
+
+
+    display:flex;
+
+    justify-content:
+    space-between;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+.sport {
+
+
+    font-size:25px;
+
+}
+
+
+
+.bookmaker {
+
+
+    color:#d4af37;
+
+    font-weight:bold;
+
+}
+
+
+
+.bet-motif {
+
+
+    font-size:16px;
+
+
+    line-height:1.5;
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+.bet-info {
+
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:8px;
+
+
+    color:#ccc;
+
+
+}
+
+
+
+
+.win {
+
+
+    margin-top:10px;
+
+
+    background:
+
+    rgba(
+        0,
+        180,
+        0,
+        .2
+    );
+
+
+    color:#00ff66;
+
+
+    padding:10px;
+
+
+    border-radius:10px;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+.loss {
+
+
+    margin-top:10px;
+
+
+    background:
+
+    rgba(
+        200,
+        0,
+        0,
+        .2
+    );
+
+
+    color:#ff5555;
+
+
+    padding:10px;
+
+
+    border-radius:10px;
+
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+
+@media(max-width:900px){
+
+
+.dashboard {
+
+
+    grid-template-columns:
+
+    repeat(
+        2,
+        1fr
+    );
+
+
+}
+
+
+
+#bets-container {
+
+
+    grid-template-columns:
+
+    1fr;
+
+
+}
+
+
+}
+
+
+
+
+@media(max-width:500px){
+
+
+body {
+
+    padding:10px;
+
+}
+
+
+header h1 {
+
+
+    font-size:26px;
+
+
+}
+
+
+
+.dashboard {
+
+
+    grid-template-columns:
+
+    1fr;
+
+
+}
+
+
+.filters input,
+.filters select {
+
+
+    width:100%;
+
+}
+
+
+
+}
+
+.refund {
+
+    margin-top:10px;
+
+    background:
+    rgba(
+        220,
+        180,
+        0,
+        .2
+    );
+
+    color:#ffd700;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    font-weight:bold;
+
+}
