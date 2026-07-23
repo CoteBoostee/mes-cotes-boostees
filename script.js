@@ -782,6 +782,7 @@ b=>getMonth(b.date)
 .filter(
 m=>m
 )
+   )
 ]
 );
 
